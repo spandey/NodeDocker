@@ -1,19 +1,45 @@
 const Joi = require('joi');
 const express = require('express');
 const app = express();
-app.use(express.json()); // middleware request pipleine for parsing req.body
+
+// Express v4.16.0 and higher
+// --------------------------
+// const express = require('express');
+
+// app.use(express.json());
+// app.use(express.urlencoded({
+//   extended: true
+// }));
+
+// // For Express version less than 4.16.0
+// // ------------------------------------
+// const bodyParser = require('body-parser');
+
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
+
+app.use(express.json()); // middleware 1 request pipleine for parsing req.body 
 
 const employeeData = [
     { id: 1, name:"Shambhu", salary: "1000" },
     { id: 2, name:"Atharv", salary: "5000" },
     { id: 3, name:"Amit", salary: "2000" }
 ]
+
+app.use((req,res,next)=>{
+    console.log("first");
+    //res.send('<h1>My first custom middlewar</h1>')
+    next();
+    })
 //get API 
 
 app.get('/', (req, res)=>{
 
     res.send("hello word")
 })
+
 
 app.get("/api/employee", (req,res)=> {
 
@@ -73,16 +99,29 @@ app.put("/api/employee/:id", (req,res)=> {
 
 
 
+// midileware 2 for 404 
+app.use(function (req, res, next) {
+    console.log("404 not found");
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+  });
+  
+  // error handler
+  app.use(function (err, req, res, next) {
+    // set locals, only providing error in development
+     
+    // render the error page
+    res.status(err.status || 500);
+    res.render(err.message);
+  });
+app.use((req, res)=>{
+res.status(404).render('404',{'title':'404'})
+
+
+}); // next() not required if it is in last
+
 
 const port = process.env.port || 3001
 app.listen(port,"localhost",()=> {console.log(`server is running on ${port}`)})
 
-function validateField(fields){
-    const schema = Joi.object(
-        { 
-        name: Joi.string().min(3).max(30).required(),
-        salary: Joi.number().min(5).required()    
-        })
-
-    return schema.validate(fields);
-}

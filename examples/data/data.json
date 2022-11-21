@@ -1,0 +1,10 @@
+{
+    "employeeData" : [
+        { "id": 1, "name":"Shambhu", "salary": "1000" },
+        { "id": 2, "name":"Atharv", "salary": "5000" },
+        { "id": 3, "name":"Amit", "salary": "2000" }
+
+    ]
+    
+}
+   
