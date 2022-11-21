@@ -126,20 +126,7 @@ let racer1 = function() {
   setTimeout(()=>console.log("set time out ", i), 1000);
   */
   
- // find  word count in string 
- /*let string = "welcome1 welcome1 test for agaon welcome1 agaon" ;
-
- let words = {};
-  let stringToArray = string.split(" ");
-  for (let word of stringToArray) {
-    if(!words[word]) {
-      words[word] = 1;
-    }
-    else {
-      words[word]++;
-    }
-  }
-console.log(words); */
+ 
 // duplicate word 
 /*let st = "welcome1 welcome1 test for agaon welcome1 agaon" ;
 
@@ -161,28 +148,8 @@ let string = st.toLowerCase();
       console.log(stringToArray);
     }
   }*/
-  // word count
-  /*let words = "I am not gonna live shambhu  but shambhu wanna live while I am alive";
-
-function countRepeatedWords(sentence) {
-  let words = sentence.split(" ");
-  let wordMap = {};
-
-  for (let i = 0; i < words.length; i++) {
-    let currentWordCount = wordMap[words[i]];
-    let count = currentWordCount ? currentWordCount : 0;
-    wordMap[words[i]] = count + 1;
-  }
-  return wordMap;
-}
-
-console.log(countRepeatedWords(words)); */
- /* let checkWords = "I am not gonna live forever, but I wanna live while I am alive"
-
-const newStr = checkWords.split(' ').reduce((acc,rec) => {
-  return ({ ...acc, [rec]: (acc[rec] || 0) + 1 })
-},{})
-console.log(newStr);*/
+  
+ 
 // duplicate word
 /*const str = "big black shambhu bug bit a big black shambhu dog on his big black nose";
 const findDuplicateWords = str => {
@@ -227,57 +194,7 @@ const findDuplicateWords = str => {
 console.log(findDuplicateWords(strArr));
 */
 
-//remove duplicate form array
-const arr =[1,1,5,3,3,1,4,5]
-let test = (str) =>{
-    let rstr= [];
- 
-     for(let j =0 ; j <str.length ;j++ ){
-          let match = false
-        for(let i =0 ; i < rstr.length ;i++ ){
-            if( rstr[i] === str[j]){
-                match = true;
-                break;
-            }
-       }
-       if(!match){
-           rstr.push(str[j])
-       }
-   }
-   return rstr
-}
-function test1(arr){
-    let result =[];
-    for(let i = 0; i <arr.length; i++)
-    {
-        if(result.indexOf(arr[i]) === -1){
-            result.push(arr[i])
-        }
-    }
-    return result;
-}
-test2 = (arr)=>{
-     let result =[];
-    for (let value of arr){
-        if(result.includes(value)){
-            continue;
-        }
-        result.push(value);
-       
-    }
-    return result.join(" ");
-       
-    }
-     
-var colors = ["red","red","green","green","green", "black"];
-console.log(test(arr))
-console.log(test(colors))
 
-console.log(test1(arr))
-console.log(test1(colors))
-
-console.log(test2(arr))
-console.log(test2(colors))
 
 const str = "big black shambhu bug bit a big black shambhu dog on his big black nose";
 

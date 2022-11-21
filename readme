@@ -1,1 +1,428 @@
-readme
+Q1.How to define a class with properties and methods in JavaScript?
+
+Ans. There are 2 method define a class . In Es6 there is class keyword to define class. In other hand javascript have prototype and propertty itself and 
+we can defineproty by Object.defineProperties().
+
+ex 1.  Class Test() {
+...
+}
+let test1 = new Test(); // constructer create new object of type class test.
+have aleready get and set metted
+
+Ex2. function Person() {
+    var _firstName = "unknown";
+
+    Object.defineProperties(this, {
+        "FirstName": {
+            get: function () {
+                return _firstName;
+            },
+            set: function (value) {
+                _firstName = value;
+            }
+        }
+    });
+};
+
+var person1 = new Person(); //by constructer property global
+person1.FirstName = "Steve";
+alert(person1.FirstName );
+
+we can create getter and setter method by Object.defineProperties().
+function Person() {
+    var _firstName = "unknown";
+
+    Object.defineProperties(this, {
+        "FirstName": {
+            get: function () {
+                return _firstName;
+            },
+            set: function (value) {
+                _firstName = value;
+            }
+        }
+    });
+};
+
+var person1 = new Person();
+person1.FirstName = "Steve";
+alert(person1.FirstName );
+            
+var person2 = new Person();
+person2.FirstName = "Bill";
+alert(person2.FirstName );
+
+
+
+
+____________________________________________________
+
+Q2. How to implement class inheritance in JavaScript?
+Ans. Inheritance enables you to define a class that takes all the functionality from a parent class and allows you to add more.
+
+Using class inheritance, a class can inherit all the methods and properties of another class.
+
+Inheritance is a useful feature that allows code reusability.
+
+To use class inheritance, you use the extends keyword. For example,
+
+
+// parent class
+class Person { 
+    constructor(name) {
+        this.name = name;
+        this.occupation = "unemployed";
+    }
+    
+    greet() {
+        console.log(`Hello ${this.name}.`);
+    }
+ 
+}
+
+// inheriting parent class
+class Student extends Person {
+
+    constructor(name) {
+        
+        // call the super class constructor and pass in the name parameter
+        super(name);
+        
+        // Overriding an occupation property
+        this.occupation = 'Student';
+    }
+    
+    // overriding Person's method
+    greet() {
+        console.log(`Hello student ${this.name}.`);
+        console.log('occupation: ' + this.occupation);
+    }
+}
+
+let p = new Student('Jack');
+p.greet();
+
+
+
+
+
+______________________________________________________________________
+
+//How to find duplicate elements in a given array? // See in code file "fndrminarray.js
+
+
+//Q. How to find the count of duplicates in an array? // 
+_________________________________________________________________________
+
+Q. How to check if a given number is an integer?
+Ans. Number.isInteger(123);
+Number.isInteger(-123);
+Number.isInteger('123');
+_____________________________________________________________
+
+Q. Explain the difference between Object.freeze() vs const?
+
+Ans . const: The const keyword creates a read-only reference to a value. Variables created by the const keyword are immutable. 
+In other words, you can’t reassign them to different values. Trying to reassign a constant variable will result in a TypeError.
+
+Ex. const myName = "Geeksforgeeks"
+console.log(myName)
+
+// Uncaught TypeError
+myName = "gfg" 
+
+The const keyword ensures that the variable created is read-only. 
+But It doesn’t mean that the actual value to which the const variable reference is immutable. 
+Even though the person variable is constant. However, you can change the value of its property.
+ But you cannot reassign a different value to the person constant.
+
+ const person = {
+    name: "Geeksforgeeks"
+};
+     
+// No TypeError
+person.name = "gfg";
+console.log(person.name);
+
+
+Object.freeze() method: If you want the value of the person object to be immutable, you have to freeze it by using the Object.freeze() method. 
+
+const person = Object.freeze({name: "Geeksforgeeks"});
+    
+// TypeError in strict mode
+//in non-strict mode it prints "Geeksforgeeks"
+person.name = "gfg";
+
+The Object.freeze() method is shallow, meaning that it can freeze the properties of the object, not the objects referenced by the properties. 
+
+const person = Object.freeze({
+    name: 'Geeksforgeeks',
+    address: {
+        city:"Noida"
+    }
+});
+But the person.address object is not immutable, you can add a new property to the person.address object as follows: 
+// No TypeError
+person.address.country = "India";
+
+___________________________________________________________________________________
+
+
+
+
+Q. How to Sort a Number Array?
+
+Ans. JavaSript provided sort mathed to sort the array.but it is sort as string so number sorting will not correct. Ex 75 and 200 is treated as "75" and "200"
+    than “75” is bigger than “200”.
+
+    so there are 2 way to sorting....
+
+    Using Compare Function
+    By Creating Loops
+
+    Compare function  ---- 
+    Using Compare Function: We can create a Compare function that return negative, zero, or positive values. 
+    Syntax: 
+ 
+
+    function(a, b){return a - b}
+ 
+
+    Negative Value ( a > b) => a will be Place before b
+    zero value (a == b) => No Change
+    Positive Value (a < b ) => a will be place after b
+
+
+    var marks = [12, 25, 31, 23, 75, 81, 100];
+    // Sort elements using compare method
+     marks.sort(function(a, b){return a - b}); // For assending order
+     marks.sort(function(a, b){return b - a}); // for desending order
+
+     Creating Loops: We can also use loops to sort the array elements. Here, 
+     we will use bubble sort (simple sorting technique) to sort the array elements in ascending order.
+ 
+     function Numeric_sort(ar) {
+     
+        var i = 0, j;
+         
+        while (i < ar.length) {
+            j = i + 1;
+            while (j < ar.length) {
+                 
+                if (ar[j] < ar[i]) {
+                    var temp = ar[i];
+                    ar[i] = ar[j];
+                    ar[j] = temp;
+                }
+                j++;
+            }
+            i++;
+        }
+    }
+     
+    // Original Array
+    var arr = [1, 15, 10, 45, 27, 100];
+__________________________________________________________________________________________
+
+
+// Sort a given array of strings // See... https://www.geeksforgeeks.org/sort-the-array-of-strings-according-to-alphabetical-order-defined-by-another-string/
+
+// How to find unique values in an array? // // See in code file "fndrminarray.js
+
+How to find unique values from an Array in sorted order?
+
+Find maximum value in a numbered array?
+
+Find minimum value in a numbered array?
+
+Find the average of the numbers in the numbered array?
+
+How can you uppercase the first character in a string array?
+
+How to make a sentence out of the given string array?
+
+How to check if an array contains any element of another array?
+
+Given two strings, how can you check if the strings are anagram for each other?
+
+How can you extract a few fields from the given JSON object and form a new array?
+
+Filter the given object based on certain conditions and return the corresponding object?
+
+Given an array of strings, reverse each word in the sentence?
+
+How to check if an object is present in an Array or not?
+
+How to empty an array?
+
+What is IIFEs (Immediately Invoked Function Expressions)?
+
+How do you sort and reverse an array without changing the original array?
+
+Write a function to check if a given string is Palindrome or not?
+
+How can you combine two Arrays into a third Array using spread operator?
+
+How can you Insert an element at a specific index in an Array?
+
+How can you Replace an element at a specific index in an Array?
+
+How can you Delete an element at a specific index in an Array?
+
+How can you delete a specific element?
+
+How do you clone an Object?
+
+How do you add an element at the beginning of an array?
+
+How to remove an element from the end of the array?
+
+How can you split a string into an Array?
+
+How can you remove an element from the beginning of the array?
+
+How can you add an element to an object?
+
+How can you replace an existing element in an object?
+
+How can you combine two objects?
+
+How do you write a function which can take (x) number of parameters?
+
+Convert the given number into the exact decimal points to the right side?
+
+How do you return a character from a string at a specific index(2)?
+
+How do you create an Array out of a given sentence?
+
+How do you replace a given string in the string of arrays?
+
+How do you write an add() function using javascript currying concept?
+
+Implement a groupBy method in JavaScript?
+
+Explain WeakSet in javascript with an example?
+
+Explain WeakMap in javascript with an example?
+
+Explain what is Object Destructuring with an example?
+
+How can we generate a random alphanumeric string in JavaScript?
+
+How can we call a function which logs a message after every 5 seconds?
+
+How can we delay calling a function after 5 seconds?
+
+Write a function that performs binary search on a sorted array?
+
+How can we parse a given JSON object?
+
+How do you check whether a string contains a substring?
+
+How do I get query string values in javascript?
+
+How to create and trigger events in javascript?
+
+How to display the current date in javascript?
+
+How do you compare time for two dates?
+
+How do you check if a string starts with another string?
+
+How do you remove whitespaces from a given string?
+
+How do you assign default values to variables?
+
+For a given function, count the number of parameters expected by a function?
+
+Implement a method which generates 5 random numbers?
+
+Implement a method which generates random numbers between 41 and 67 and sort them reverse?
+
+How do you search a string for a pattern?
+
+How to write an Object and implement multiple function chaining?
+
+How do you determine whether an object is frozen or not?
+
+How do you determine two values are the same or not using an object?
+
+How do you copy properties from one object to another object?
+
+How do you determine if an object is sealed or not?
+
+How do you get an enumerable key and value pairs?
+
+What is the main difference between Object.values and Object.entries method?
+
+How can you get the list of keys of any object?
+
+How do you encode an URL?
+
+How do you define property on an Object constructor?
+
+How can you call the constructor of a parent class?
+
+How do you check whether an object can be extendable or not?
+
+How do you prevent an object from extending?
+
+How do you find the Vowels?
+
+What are default values in destructuring assignment?
+
+How do you swap variables in destructuring assignment?
+
+How do you combine two or more arrays?
+
+How to create a specific number of copies for a string?
+
+What is the easiest way to convert an array to an object?
+
+Verify that a function argument is a Number or not?
+
+What is the easiest way to resize an Array?
+
+What's the difference between a function expression and function declaration?
+
+How to detect a mobile device with JavaScript?
+
+How to fill static values in an array?
+
+Why do we use The some() method in Arrays?
+
+How to add 15 minutes to a JavaScript Date?
+
+Explain JavaScript Promises with an example?
+
+Which keyword can be used to deploy inheritance in ES6?
+
+What is the difference between for..of and for..in?
+
+How to set a property in localStorage?
+
+Give a list of the various ways using which an HTML element can be accessed within a JavaScript code?
+
+State the difference between Apply and Call?
+
+What is the difference between undefined and not defined in JavaScript?
+
+Explain Closure in JavaScript with an example?
+
+How to calculate the length of an associative array using JavaScript?
+
+Explain JavaScript promise.all with an example?
+
+Explain Promise.race with an example?
+
+Give an example of an Anonymous function?
+
+What is Prototype Property? Explain with an Example.
+
+Explain function hoisting with an example?
+
+How to implement Bubble sort in JavaScript?
+
+How to find prime numbers in an Array?
+
+How to generate fibonacci series in JavaScript?
