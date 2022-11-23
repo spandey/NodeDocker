@@ -229,13 +229,24 @@ ________________________________________________________________________________
 
 // How to find unique values in an array? // // See in code file "fndrminarray.js
 
-How to find unique values from an Array in sorted order?
+//Q . How to find unique values from an Array in sorted order?  Ans in ./functions/unique-max-min-array.js
 
-Find maximum value in a numbered array?
+//Q . Find maximum value in a numbered array?   Ans in ./functions/unique-max-min-array.js
 
-Find minimum value in a numbered array?
+//Q . Find minimum value in a numbered array?  Ans in ./functions/unique-max-min-array.js
 
-Find the average of the numbers in the numbered array?
+//Q . Find the average of the numbers in the numbered array? Ans in ./functions/unique-max-min-array.js
+//Q. How do you sort and reverse an array without changing the original array? ./functions/unique-max-min-array.js
+// Q. How to empty an array? // Ans in ./functions/unique-max-min-array.js
+//Q . How do you sort and reverse an array without changing the original array? ./functions/unique-max-min-array.js
+
+//Q . How can you combine two Arrays into a third Array using spread operator? ./functions/arrayOthersFunctuion.js
+
+//Q . How can you Insert an element at a specific index in an Array?./functions/arrayOthersFunctuion.js
+
+//Q . How can you Replace an element at a specific index in an Array?./functions/arrayOthersFunctuion.js
+
+//Q . How can you Delete an element at a specific index in an Array?./functions/arrayOthersFunctuion.js
 
 How can you uppercase the first character in a string array?
 
@@ -253,21 +264,16 @@ Given an array of strings, reverse each word in the sentence?
 
 How to check if an object is present in an Array or not?
 
-How to empty an array?
 
 What is IIFEs (Immediately Invoked Function Expressions)?
 
-How do you sort and reverse an array without changing the original array?
+
 
 Write a function to check if a given string is Palindrome or not?
 
-How can you combine two Arrays into a third Array using spread operator?
 
-How can you Insert an element at a specific index in an Array?
 
-How can you Replace an element at a specific index in an Array?
 
-How can you Delete an element at a specific index in an Array?
 
 How can you delete a specific element?
 

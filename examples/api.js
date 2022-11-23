@@ -12,14 +12,12 @@ app.use((req,res,next)=>{
     //res.send('<h1>My first custom middlewar</h1>')
     next();
     })
-//get API 
+
+
+// API middlewar
+
 app.use(mainroute);
 app.use('/api',adminroute);
-
-
-
-
-
 
 
 // midileware 2 for 404 
@@ -42,18 +40,8 @@ app.use(function (req, res, next) {
 // res.status(404).render('404',{'title':'404'})
 
 
-// }); // next() not required if it is in last
+// }); // next() not required if it is in last or if we using res.send()
 
 
 const port = process.env.port || 3001
 app.listen(port,"localhost",()=> {console.log(`server is running on ${port}`)})
-
-function validateField(fields){
-    const schema = Joi.object(
-        { 
-        name: Joi.string().min(3).max(30).required(),
-        salary: Joi.number().min(5).required()    
-        })
-
-    return schema.validate(fields);
-}
