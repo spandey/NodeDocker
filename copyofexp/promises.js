@@ -143,4 +143,3 @@ pRace.then((data)=>{
     promiseininner()
     .then((mgs)=>console.log(`this is my ${mgs}`))
     .catch((err)=>console.log(err))
-    

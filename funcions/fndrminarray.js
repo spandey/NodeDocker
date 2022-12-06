@@ -1,18 +1,19 @@
 //find Array duplicate
 let arr = [1,2,3,4,4,6,5,1,2,7,8,9,9];
+var colors = ["red","red","green","green","green", "black"];
 function findDuplicate(arr){
 let newArray = arr.filter((e,i,arr)=> (arr.indexOf(e) != i));
 console.log(newArray);
 }
+findDuplicate(colors);
 findDuplicate(arr);
-
 function removerepeted(arr){
     let newArray = arr.filter((e,i,arr)=> (arr.indexOf(e) === i));
     console.log(newArray);
 }
 
 
-removerepeted(arr)
+removerepeted(colors)
 
 // Other Examples
 let test = (str) =>{
@@ -55,7 +56,7 @@ test2 = (arr)=>{
        
     }
      
-var colors = ["red","red","green","green","green", "black"];
+
 console.log(test(arr))
 console.log(test(colors))
 

@@ -38,18 +38,3 @@ async function testasyncawait(){
 testasyncawait();
 
 // prev example like promise chain
-
-// promise All with Async Await
-const testasyncwithall = async function() {
-   try{
-      let awaitAll = await Promise.all([promiseTest(true, 1500,arrtemp1), promiseTest(true, 2500,arrtemp2), promiseTest(true, 2500,arrtemp)])
- 
-   console.log(awaitAll);
-
-   }
-   catch(err) {
-      console.log(err)
-   }
-   
-}
-testasyncwithall();

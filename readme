@@ -1,4 +1,4 @@
-Q1.How to define a class with properties and methods in JavaScript?
+`Q1.How to define a class with properties and methods in JavaScript?
 
 Ans. There are 2 method define a class . In Es6 there is class keyword to define class. In other hand javascript have prototype and propertty itself and 
 we can defineproty by Object.defineProperties().
@@ -45,12 +45,12 @@ function Person() {
 };
 
 var person1 = new Person();
-person1.FirstName = "Steve";
+person1.FirstName = "What's the difference between a function expression and function declaration?Steve";
 alert(person1.FirstName );
             
 var person2 = new Person();
 person2.FirstName = "Bill";
-alert(person2.FirstName );
+alert(person2.FirstName );`
 
 
 
@@ -248,6 +248,7 @@ ________________________________________________________________________________
 
 //Q . How can you Delete an element at a specific index in an Array?./functions/arrayOthersFunctuion.js
 
+
 How can you uppercase the first character in a string array?
 
 How to make a sentence out of the given string array?
@@ -389,7 +390,7 @@ Verify that a function argument is a Number or not?
 
 What is the easiest way to resize an Array?
 
-What's the difference between a function expression and function declaration?
+
 
 How to detect a mobile device with JavaScript?
 
@@ -399,7 +400,7 @@ Why do we use The some() method in Arrays?
 
 How to add 15 minutes to a JavaScript Date?
 
-Explain JavaScript Promises with an example?
+
 
 Which keyword can be used to deploy inheritance in ES6?
 
@@ -409,26 +410,27 @@ How to set a property in localStorage?
 
 Give a list of the various ways using which an HTML element can be accessed within a JavaScript code?
 
-State the difference between Apply and Call?
+
 
 What is the difference between undefined and not defined in JavaScript?
 
 Explain Closure in JavaScript with an example?
-
 How to calculate the length of an associative array using JavaScript?
-
-Explain JavaScript promise.all with an example?
-
-Explain Promise.race with an example?
-
-Give an example of an Anonymous function?
-
-What is Prototype Property? Explain with an Example.
+//Q. What is Prototype Property? Explain with an Example. // ./docs/prototype.txt
 
 Explain function hoisting with an example?
 
-How to implement Bubble sort in JavaScript?
+// Q.What's the difference between a function expression and function declaration? // ./functions/type-of-functions.js
+// Q. Give an example of an Anonymous function? // ./functions/type-of-functions.js
 
-How to find prime numbers in an Array?
+//Q. Explain JavaScript Promises with an example? // ./examples/promises.js
+//Q. Explain JavaScript promise.all with an example? // ./examples/promises.js
 
-How to generate fibonacci series in JavaScript?
+//Q. Explain Promise.race with an example? // ./examples/promises.js
+
+//Q. How to implement Bubble sort in JavaScript? // ./functions/algo-bublesort.js
+
+//Q. How to find prime numbers in an Array? // ./functions/series-prime.js
+
+//Q. How to generate fibonacci series in JavaScript? // ./functions/series-fobonic.js
+//Q. State the difference between Bind, Apply and Call? // ./examples/applyCallBind.js

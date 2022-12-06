@@ -29,7 +29,7 @@ function fundelayPromises(delay,status) {
 }
 
 fundelayPromises(1000,false);
-typescript
+
 
 const delayPromises = (delay,status) => new Promise((resolve,reject)=>
 setTimeout(()=> status ? resolve() : reject(status), delay)
