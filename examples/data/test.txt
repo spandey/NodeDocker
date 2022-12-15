@@ -1,0 +1,49 @@
+The fs.writeFile() method is used to asynchronously write the specified data to a file. By default, the file would be replaced if it exists. The ‘options’ parameter can be used to modify the functionality of the method.
+
+Syntax:
+
+fs.writeFile( file, data, options, callback )
+Parameters: This method accept four parameters as mentioned above and described below:
+
+file: It is a string, Buffer, URL or file description integer that denotes the path of the file where it has to be written. Using a file descriptor will make it behave similar to fs.write() method.
+data: It is a string, Buffer, TypedArray or DataView that will be written to the file.
+options: It is an string or object that can be used to specify optional parameters that will affect the output. It has three optional parameter:
+encoding: It is a string value that specifies the encoding of the file. The default value is ‘utf8’.
+mode: It is an integer value that specifies the file mode. The default value is 0o666.
+flag: It is a string value that specifies the flag used while writing to the file. The default value is ‘w’.
+callback: It is the function that would be called when the method is executed.
+err: It is an error that would be thrown if the operation fails.
+
+
+
+ The fs.readFile() method is an inbuilt method which is used to read the file. 
+ This method read the entire file into buffer. To load the fs module we use require() method. For example: var fs = require(‘fs’);
+ 
+
+Syntax:  
+
+fs.readFile( filename, encoding, callback_function )
+Parameters: The method accept three parameters as mentioned above and described below:  
+
+filename: It holds the name of the file to read or the entire path if stored at other location.
+encoding: It holds the encoding of file. Its default value is ‘utf8’.
+callback_function: It is a callback function that is called after reading of file. It takes two parameters:
+err: If any error occurred.
+data: Contents of the file.
+Return Value: It returns the contents/data stored in file or error if any.
+Below examples illustrate the fs.readFile() method in Node.js:
+
+
+
+
+The fs.renameSync() method is used to synchronously rename a file at the given old path to the given new path. It will overwrite the destination file if it already exists.
+
+Syntax:
+
+fs.renameSync( oldPath, newPath )
+Property Values:
+
+oldPath: It holds the path of the file that has to be renamed. It can be a string, buffer or URL.
+newPath: It holds the new path that the file has to be renamed to. It can be a string, buffer or URL.
+Below examples illustrate the fs.renameSync() method in Node.js:
+
