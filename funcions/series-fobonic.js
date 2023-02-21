@@ -25,4 +25,9 @@ function printFabonicSeries(num) {
 
     }
 }
+
+
 printFabonicSeries(10);
+
+
+

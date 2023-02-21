@@ -36,6 +36,10 @@ Array.prototype.insert = function ( index, ...items ) {
 let arrInsert= [ 'A', 'B', 'E' ];
 arrInsert.insert(2, 'C', 'D');
 console.log(arrInsert);
+//splice(start)
+// splice(start, deleteCount)
+// splice(start, deleteCount, item1)
+// splice(start, deleteCount, item1, item2, itemN)
 // 3 way 
 const numbers = ['one', 'two', 'four', 'five']
 numbers.splice(2, 0, 'three');
